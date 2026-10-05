@@ -1,0 +1,7 @@
+K   K  RRRR   PPPP    CCCC  TTTTT
+K  K   R   R  P   P  C       T
+K K    R   R  P   P  C       T
+KK     RRRR   PPPP   C       T
+K K    R R    P      C       T
+K  K   R  R   P      C       T
+K   K  R   R  P       CCCC   T

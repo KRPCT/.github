@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img" aria-labelledby="title desc">
+  <title id="title">KRPCT — Build what comes next. Keep it yours.</title>
+  <desc id="desc">A constructivist poster in vermilion, paper white, and ink black. A monumental ASCII Penrose triangle stands on a diagonal red plane beside the words Build what comes next. The letter-built KRPCT wordmark appears at the foot.</desc>
+  <rect width="1200" height="1000" fill="#f2ecdf"/>
+  <path d="M 355,360 1200,128 1200,1000 490,1000 Z" fill="#e43b2c"/>
+  <g fill="#181917" font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <text x="44" y="217" font-size="224" letter-spacing="-16">KRPCT</text>
+  </g>
+  <g font-family="'Courier New', Courier, monospace" fill="#181917" font-size="22" font-weight="700">
+    <text x="56" y="47">INDEPENDENT SOFTWARE</text>
+    <text x="1139" y="47" text-anchor="end">THINK / MAKE / CHANGE</text>
+  </g>
+  <path d="M 57,261 H 358" stroke="#181917" stroke-width="5"/>
+  <path d="M 57,315 H 180 L 157,292 M 180,315 157,338" fill="none" stroke="#e43b2c" stroke-width="12"/>
+  <g fill="#181917" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="86" letter-spacing="-4">
+    <text x="51" y="455">BUILD</text>
+    <text x="51" y="543">WHAT</text>
+    <text x="51" y="631">COMES</text>
+    <text x="51" y="719">NEXT.</text>
+  </g>
+  <g id="penrose-ascii" transform="rotate(-10 818 574)" font-family="'Courier New', Courier, monospace" font-weight="700" xml:space="preserve">
+    <text x="774 786 798 810 822" y="331" font-size="22" fill="#181917">#####</text>
+    <text x="762 774 786 798 810" y="352" font-size="22" fill="#181917">#####</text>
+    <text x="750 762 774 786 798" y="373" font-size="22" fill="#181917">#####</text>
+    <text x="738 750 762 774 786" y="394" font-size="22" fill="#181917">#####</text>
+    <text x="726 738 750 762 774" y="415" font-size="22" fill="#181917">#####</text>
+    <text x="714 726 738 750 762" y="436" font-size="22" fill="#181917">#####</text>
+    <text x="702 714 726 738 750" y="457" font-size="22" fill="#181917">#####</text>
+    <text x="690 702 714 726 738" y="478" font-size="22" fill="#181917">#####</text>
+    <text x="678 690 702 714 726" y="499" font-size="22" fill="#181917">#####</text>
+    <text x="666 678 690 702 714" y="520" font-size="22" fill="#181917">#####</text>
+    <text x="654 666 678 690 702" y="541" font-size="22" fill="#181917">#####</text>
+    <text x="642 654 666 678 690" y="562" font-size="22" fill="#181917">#####</text>
+    <text x="630 642 654 666 678" y="583" font-size="22" fill="#181917">#####</text>
+    <text x="618 630 642 654 666" y="604" font-size="22" fill="#181917">#####</text>
+    <text x="606 618 630 642 654" y="625" font-size="22" fill="#181917">#####</text>
+    <text x="594 606 618 630 642" y="646" font-size="22" fill="#181917">#####</text>
+    <text x="582 594 606 618 630" y="667" font-size="22" fill="#181917">#####</text>
+    <text x="570 582 594 606 618" y="688" font-size="22" fill="#181917">#####</text>
+    <text x="558 570 582 594 606" y="709" font-size="22" fill="#181917">#####</text>
+    <text x="546 558 570 582 594 606 618 630 642 654 666 678 690 702 714 726 738 750 762 774 786 798 810 822 834 846 858 870 882 894 906 918 930" y="730" font-size="22" fill="#181917">#################################</text>
+    <text x="534 546 558 570 582 594 606 618 630 642 654 666 678 690 702 714 726 738 750 762 774 786 798 810 822 834 846 858 870 882 894 906 918 930 942" y="751" font-size="22" fill="#181917">###################################</text>
+    <text x="846" y="331" font-size="22" fill="#f2ecdf">.</text>
+    <text x="834 846 858" y="352" font-size="22" fill="#f2ecdf">...</text>
+    <text x="822 834 846 858 870" y="373" font-size="22" fill="#f2ecdf">.....</text>
+    <text x="810 822 834 846 858 870 882" y="394" font-size="22" fill="#f2ecdf">.......</text>
+    <text x="798 810 822 834 846 858 870 882 894" y="415" font-size="22" fill="#f2ecdf">.........</text>
+    <text x="786 798 810 822 834 858 870 882 894 906" y="436" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="774 786 798 810 822 870 882 894 906 918" y="457" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="762 774 786 798 810 882 894 906 918 930" y="478" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="750 762 774 786 798 894 906 918 930 942" y="499" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="738 750 762 774 786 906 918 930 942 954" y="520" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="726 738 750 762 774 918 930 942 954 966" y="541" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="714 726 738 750 762 930 942 954 966 978" y="562" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="702 714 726 738 750 942 954 966 978 990" y="583" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="690 702 714 726 738 954 966 978 990 1002" y="604" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="678 690 702 714 726 966 978 990 1002 1014" y="625" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="666 678 690 702 714 978 990 1002 1014 1026" y="646" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="654 666 678 690 702 990 1002 1014 1026 1038" y="667" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="642 654 666 678 690 1002 1014 1026 1038 1050" y="688" font-size="22" fill="#f2ecdf">..........</text>
+    <text x="1014 1026 1038 1050 1062" y="709" font-size="22" fill="#f2ecdf">.....</text>
+    <text x="1026 1038 1050 1062 1074" y="730" font-size="22" fill="#f2ecdf">.....</text>
+    <text x="1038 1050 1062 1074 1086" y="751" font-size="22" fill="#f2ecdf">.....</text>
+    <text x="1050 1062 1074 1086 1098" y="772" font-size="22" fill="#f2ecdf">.....</text>
+    <text x="1062 1074 1086" y="793" font-size="22" fill="#f2ecdf">...</text>
+    <text x="1074" y="814" font-size="22" fill="#f2ecdf">.</text>
+    <text x="846" y="457" font-size="22" fill="#181917">:</text>
+    <text x="834 846 858" y="478" font-size="22" fill="#181917">:::</text>
+    <text x="822 834 846 858 870" y="499" font-size="22" fill="#181917">:::::</text>
+    <text x="834 846 858 870 882" y="520" font-size="22" fill="#181917">:::::</text>
+    <text x="846 858 870 882 894" y="541" font-size="22" fill="#181917">:::::</text>
+    <text x="858 870 882 894 906" y="562" font-size="22" fill="#181917">:::::</text>
+    <text x="870 882 894 906 918" y="583" font-size="22" fill="#181917">:::::</text>
+    <text x="882 894 906 918 930" y="604" font-size="22" fill="#181917">:::::</text>
+    <text x="894 906 918 930 942" y="625" font-size="22" fill="#181917">:::::</text>
+    <text x="906 918 930 942 954" y="646" font-size="22" fill="#181917">:::::</text>
+    <text x="918 930 942 954 966" y="667" font-size="22" fill="#181917">:::::</text>
+    <text x="930 942 954 966 978" y="688" font-size="22" fill="#181917">:::::</text>
+    <text x="942 954 966 978 990" y="709" font-size="22" fill="#181917">:::::</text>
+    <text x="954 966 978 990 1002" y="730" font-size="22" fill="#181917">:::::</text>
+    <text x="966 978 990 1002 1014" y="751" font-size="22" fill="#181917">:::::</text>
+    <text x="978 990 1002 1014 1026" y="772" font-size="22" fill="#181917">:::::</text>
+    <text x="534 546 558 570 582 594 606 618 630 642 654 666 678 690 702 714 726 738 750 762 774 786 798 810 822 834 846 858 870 882 894 906 918 930 942 954 966 978 990 1002 1014 1026 1038" y="793" font-size="22" fill="#181917">:::::::::::::::::::::::::::::::::::::::::::</text>
+    <text x="546 558 570 582 594 606 618 630 642 654 666 678 690 702 714 726 738 750 762 774 786 798 810 822 834 846 858 870 882 894 906 918 930 942 954 966 978 990 1002 1014 1026 1038 1050" y="814" font-size="22" fill="#181917">:::::::::::::::::::::::::::::::::::::::::::</text>
+    <text x="774 786 798 810 822 834 846" y="310" font-size="22" fill="#f2ecdf">_______</text>
+    <text x="762 834 858" y="331" font-size="22" fill="#f2ecdf">//\</text>
+    <text x="750 822 870" y="352" font-size="22" fill="#f2ecdf">//\</text>
+    <text x="738 810 882" y="373" font-size="22" fill="#f2ecdf">//\</text>
+    <text x="726 798 894" y="394" font-size="22" fill="#f2ecdf">//\</text>
+    <text x="714 786 906" y="415" font-size="22" fill="#f2ecdf">//\</text>
+    <text x="702 774 846 918" y="436" font-size="22" fill="#f2ecdf">///\</text>
+    <text x="690 762 834 858 930" y="457" font-size="22" fill="#f2ecdf">///\\</text>
+    <text x="678 750 822 870 942" y="478" font-size="22" fill="#f2ecdf">///\\</text>
+    <text x="666 738 810 882 954" y="499" font-size="22" fill="#f2ecdf">//\\\</text>
+    <text x="654 726 798 822 894 966" y="520" font-size="22" fill="#f2ecdf">///\\\</text>
+    <text x="642 714 786 834 906 978" y="541" font-size="22" fill="#f2ecdf">///\\\</text>
+    <text x="630 702 774 846 918 990" y="562" font-size="22" fill="#f2ecdf">///\\\</text>
+    <text x="618 690 762 858 930 1002" y="583" font-size="22" fill="#f2ecdf">///\\\</text>
+    <text x="606 678 750 870 942 1014" y="604" font-size="22" fill="#f2ecdf">///\\\</text>
+    <text x="594 666 738 882 954 1026" y="625" font-size="22" fill="#f2ecdf">///\\\</text>
+    <text x="582 654 726 894 966 1038" y="646" font-size="22" fill="#f2ecdf">///\\\</text>
+    <text x="570 642 714 906 978 1050" y="667" font-size="22" fill="#f2ecdf">///\\\</text>
+    <text x="558 630 702 918 990 1062" y="688" font-size="22" fill="#f2ecdf">///\\\</text>
+    <text x="546 618 630 642 654 666 678 690 702 714 726 738 750 762 774 786 798 810 822 834 846 858 870 882 894 906 918 930 1002 1074" y="709" font-size="22" fill="#f2ecdf">//__________________________\\</text>
+    <text x="534 942 1014 1086" y="730" font-size="22" fill="#f2ecdf">/\\\</text>
+    <text x="522 954 1026 1098" y="751" font-size="22" fill="#f2ecdf">/\\\</text>
+    <text x="510 522 534 546 558 570 582 594 606 618 630 642 654 666 678 690 702 714 726 738 750 762 774 786 798 810 822 834 846 858 870 882 894 906 918 930 942 954 966 1038 1110" y="772" font-size="22" fill="#f2ecdf">______________________________________\\\</text>
+    <text x="522 1050 1098" y="793" font-size="22" fill="#f2ecdf">\\/</text>
+    <text x="534 1062 1086" y="814" font-size="22" fill="#f2ecdf">\\/</text>
+    <text x="546 558 570 582 594 606 618 630 642 654 666 678 690 702 714 726 738 750 762 774 786 798 810 822 834 846 858 870 882 894 906 918 930 942 954 966 978 990 1002 1014 1026 1038 1050 1062 1074" y="835" font-size="22" fill="#f2ecdf">____________________________________________\</text>
+  </g>
+  <g fill="#181917" font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <text x="56" y="825" font-size="43" letter-spacing="-1.5">KEEP IT YOURS.</text>
+  </g>
+  <path d="M 56,869 H 1144" stroke="#181917" stroke-width="2"/>
+  <g font-family="'Courier New', Courier, monospace" xml:space="preserve" font-weight="700">
+    <text x="57 83.8 103.9 110.6 117.3 124 150.8 157.5 164.2 170.9 204.4 211.1 217.8 224.5 244.6 251.3 258 264.7 271.4" y="905" font-size="10" fill="#181917">KKRRRRPPPPCCCCTTTTT</text>
+    <text x="57 77.1 103.9 130.7 150.8 177.6 197.7 251.3" y="915" font-size="10" fill="#181917">KKRRPPCT</text>
+    <text x="57 70.4 103.9 130.7 150.8 177.6 197.7 251.3" y="925" font-size="10" fill="#181917">KKRRPPCT</text>
+    <text x="57 63.7 103.9 110.6 117.3 124 150.8 157.5 164.2 170.9 197.7 251.3" y="935" font-size="10" fill="#181917">KKRRRRPPPPCT</text>
+    <text x="57 70.4 103.9 117.3 150.8 197.7 251.3" y="945" font-size="10" fill="#181917">KKRRPCT</text>
+    <text x="57 77.1 103.9 124 150.8 197.7 251.3" y="955" font-size="10" fill="#181917">KKRRPCT</text>
+    <text x="57 83.8 103.9 130.7 150.8 204.4 211.1 217.8 224.5 251.3" y="965" font-size="10" fill="#181917">KKRRPCCCCT</text>
+  </g>
+  <g fill="#181917" font-family="'Courier New', Courier, monospace" font-size="22" font-weight="700">
+    <text x="450" y="920">TOOLS FOR A FUTURE</text>
+    <text x="450" y="951">YOU OWN.</text>
+    <text x="1139" y="951" text-anchor="end">KRPCT / INC.</text>
+  </g>
+</svg>
