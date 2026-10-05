@@ -1,27 +1,21 @@
-# KRPCT
-
-**We build tools for a future you own.**
-
 <p align="center">
-  <img src="../assets/readme/hero.svg" width="100%" alt="KRPCT. A constructivist ASCII Penrose triangle in red, paper white, and black. Build what comes next. Keep it yours.">
+  <img src="../assets/readme/hero.svg?v=2" width="100%" alt="KRPCT. A dense, shaded ASCII Penrose tribar in black, cold white, and signal red. Build what comes next. Keep it yours.">
 </p>
 
-Software for thinking, creating, and working with machines.
-Built around a simple conviction: the tools that shape your work should leave you in control.
+<p align="center"><strong>We build tools for a future you own.</strong></p>
 
-[Explore the repositories](https://github.com/orgs/KRPCT/repositories?type=source) · [Meet the projects](#the-work) · [Build with us](#build-with-us)
+<p align="center">
+  <a href="https://github.com/orgs/KRPCT/repositories?type=source">Explore the repositories</a> ·
+  <a href="#the-work">Meet the projects</a> ·
+  <a href="#build-with-us">Build with us</a>
+</p>
 
-## Software, on your terms.
-
-The next generation of software should give people more room to act.
-More room to make things, change them, and take them somewhere new.
-
-We start with the work in front of us: a page to write, a book to read, an idea worth building.
+Software for thinking, creating, and working with machines. We start with a page to write, a book to read, an idea worth building. The tools that shape your work should leave you in control.
 
 ## The work
 
 <p>
-  <img src="../assets/readme/work.svg" width="100%" alt="ASCII pen and open book: InkStream for writing, Pillowtome for reading.">
+  <img src="../assets/readme/work.svg?v=2" width="100%" alt="ASCII pen and three-dimensional book: InkStream for writing, Pillowtome for reading.">
 </p>
 
 ### [InkStream](https://github.com/KRPCT/InkStream)

@@ -1,43 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
   <title id="title">From thought to form — InkStream and Pillowtome</title>
-  <desc id="desc">ASCII drawings of a pen and an open book on diagonal black and paper-white fields. InkStream for writing. Pillowtome for reading.</desc>
-  <rect width="1200" height="470" fill="#f2ecdf"/>
-  <path d="M 0,0 H 734 L 580,470 H 0 Z" fill="#181917"/>
-  <path d="M 694,0 H 734 L 580,470 H 540 Z" fill="#e43b2c"/>
+  <desc id="desc">An ASCII pen and a three-dimensional book with a hatched cover and stacked page edges. Black and cold-white panels are separated by a sharp red diagonal. InkStream for writing. Pillowtome for reading.</desc>
+  <rect width="1200" height="470" fill="#fafbff"/>
+  <path d="M 0,0 H 734 L 580,470 H 0 Z" fill="#070709"/>
+  <path d="M 690,0 H 734 L 580,470 H 536 Z" fill="#ff263b"/>
   <g font-family="'Courier New', Courier, monospace" font-size="22" font-weight="700">
-    <text x="52" y="48" fill="#f2ecdf">01 / WRITE</text>
-    <text x="819" y="48" fill="#181917">02 / READ</text>
+    <text x="52" y="48" fill="#fafbff">01 / WRITE</text>
+    <text x="819" y="48" fill="#070709">02 / READ</text>
   </g>
   <g font-family="'Courier New', Courier, monospace" xml:space="preserve" font-weight="700">
-    <text x="382 395.8" y="90" font-size="23" fill="#f2ecdf">/\</text>
-    <text x="368.2 382 395.8 409.6" y="110" font-size="23" fill="#f2ecdf">/##/</text>
-    <text x="354.4 368.2 382 395.8" y="130" font-size="23" fill="#f2ecdf">/##/</text>
-    <text x="340.6 354.4 368.2 382" y="150" font-size="23" fill="#f2ecdf">/##/</text>
-    <text x="326.8 340.6 354.4 368.2" y="170" font-size="23" fill="#f2ecdf">/##/</text>
-    <text x="313 326.8 340.6 354.4" y="190" font-size="23" fill="#f2ecdf">/##/</text>
-    <text x="299.2 313 326.8 354.4" y="210" font-size="23" fill="#f2ecdf">/__/</text>
-    <text x="285.4 299.2 313 340.6" y="230" font-size="23" fill="#f2ecdf">/../</text>
-    <text x="271.6 285.4 299.2 313 326.8" y="250" font-size="23" fill="#f2ecdf">/___/</text>
-    <text x="271.6" y="270" font-size="23" fill="#f2ecdf">/</text>
-    <text x="257.8" y="290" font-size="23" fill="#f2ecdf">.</text>
-    <text x="833.6 846.2 858.8 871.4 884 896.6 909.2 934.4 947 959.6 972.2 984.8 997.4 1010" y="103" font-size="21" fill="#181917">__..--..--..__</text>
-    <text x="770.6 783.2 795.8 808.4 821 909.2 997.4 1010 1022.6 1035.2 1047.8" y="122" font-size="21" fill="#181917">.--&#x27;&#x27;|&#x27;&#x27;--.</text>
-    <text x="758 795.8 808.4 821 833.6 846.2 858.8 909.2 959.6 972.2 984.8 997.4 1010 1022.6 1060.4" y="141" font-size="21" fill="#181917">|.----.|.----.|</text>
-    <text x="758 795.8 858.8 909.2 959.6 1022.6 1060.4" y="160" font-size="21" fill="#181917">|||||||</text>
-    <text x="758 795.8 808.4 821 833.6 846.2 858.8 909.2 959.6 972.2 984.8 997.4 1010 1022.6 1060.4" y="179" font-size="21" fill="#181917">|&#x27;----&#x27;|&#x27;----&#x27;|</text>
-    <text x="758 795.8 808.4 821 833.6 846.2 858.8 909.2 959.6 972.2 984.8 997.4 1010 1022.6 1060.4" y="198" font-size="21" fill="#181917">|------|------|</text>
-    <text x="758 795.8 808.4 821 833.6 846.2 858.8 909.2 959.6 972.2 984.8 997.4 1010 1022.6 1060.4" y="217" font-size="21" fill="#181917">|------|------|</text>
-    <text x="758 795.8 808.4 821 833.6 846.2 858.8 909.2 959.6 972.2 984.8 997.4 1010 1022.6 1060.4" y="236" font-size="21" fill="#181917">|------|------|</text>
-    <text x="758 770.6 783.2 909.2 1035.2 1047.8 1060.4" y="255" font-size="21" fill="#181917">|__|__|</text>
-    <text x="795.8 808.4 821 833.6 846.2 858.8 871.4 884 909.2 934.4 947 959.6 972.2 984.8 997.4 1010 1022.6" y="274" font-size="21" fill="#181917">&#x27;&#x27;--..__|__..--&#x27;&#x27;</text>
-    <text x="896.6 909.2 921.8" y="293" font-size="21" fill="#181917">&#x27;-&#x27;</text>
+    <text x="382 395.8" y="90" font-size="25" fill="#fafbff">/\</text>
+    <text x="368.2 382 395.8 409.6" y="110" font-size="25" fill="#fafbff">/##/</text>
+    <text x="354.4 368.2 382 395.8" y="130" font-size="25" fill="#fafbff">/##/</text>
+    <text x="340.6 354.4 368.2 382" y="150" font-size="25" fill="#fafbff">/##/</text>
+    <text x="326.8 340.6 354.4 368.2" y="170" font-size="25" fill="#fafbff">/##/</text>
+    <text x="313 326.8 340.6 354.4" y="190" font-size="25" fill="#fafbff">/##/</text>
+    <text x="299.2 313 326.8 354.4" y="210" font-size="25" fill="#fafbff">/__/</text>
+    <text x="285.4 299.2 313 340.6" y="230" font-size="25" fill="#fafbff">/../</text>
+    <text x="271.6 285.4 299.2 313 326.8" y="250" font-size="25" fill="#fafbff">/___/</text>
+    <text x="271.6" y="270" font-size="25" fill="#fafbff">/</text>
+    <text x="257.8" y="290" font-size="25" fill="#fafbff">.</text>
+    <text x="835.2 847.8 860.4 873 885.6 898.2 910.8 923.4 936 948.6 961.2 973.8 986.4 999 1011.6 1024.2 1036.8 1049.4 1062" y="98" font-size="22" fill="#070709">___________________</text>
+    <text x="822.6 835.2 847.8 860.4 873 885.6 898.2 910.8 923.4 936 948.6 961.2 973.8 986.4 999 1011.6 1024.2 1036.8 1049.4 1074.6 1087.2" y="118" font-size="22" fill="#070709">/#################//|</text>
+    <text x="810 822.6 835.2 847.8 860.4 873 885.6 898.2 910.8 923.4 936 948.6 961.2 973.8 986.4 999 1011.6 1024.2 1036.8 1062 1087.2" y="138" font-size="22" fill="#070709">/#################//|</text>
+    <text x="797.4 810 822.6 835.2 847.8 860.4 873 885.6 898.2 910.8 923.4 936 948.6 961.2 973.8 986.4 999 1011.6 1024.2 1049.4 1087.2" y="158" font-size="22" fill="#070709">/#################//|</text>
+    <text x="784.8 797.4 810 822.6 835.2 847.8 860.4 873 885.6 898.2 910.8 923.4 936 948.6 961.2 973.8 986.4 999 1011.6 1036.8 1087.2" y="178" font-size="22" fill="#070709">/#################//|</text>
+    <text x="772.2 784.8 797.4 810 822.6 835.2 847.8 860.4 873 885.6 898.2 910.8 923.4 936 948.6 961.2 973.8 986.4 999 1024.2 1087.2" y="198" font-size="22" fill="#070709">/_________________//|</text>
+    <text x="759.6 772.2 784.8 797.4 810 822.6 835.2 847.8 860.4 873 885.6 898.2 910.8 923.4 936 948.6 961.2 973.8 986.4 999 1011.6 1074.6" y="218" font-size="22" fill="#070709">|___________________//</text>
+    <text x="759.6 772.2 784.8 797.4 810 822.6 835.2 847.8 860.4 873 885.6 898.2 910.8 923.4 936 948.6 961.2 973.8 986.4 999 1011.6 1062" y="238" font-size="22" fill="#070709">|===================|/</text>
+    <text x="759.6 772.2 784.8 797.4 810 822.6 835.2 847.8 860.4 873 885.6 898.2 910.8 923.4 936 948.6 961.2 973.8 986.4 999 1011.6 1049.4" y="258" font-size="22" fill="#070709">|===================|/</text>
+    <text x="759.6 772.2 784.8 797.4 810 822.6 835.2 847.8 860.4 873 885.6 898.2 910.8 923.4 936 948.6 961.2 973.8 986.4 999 1011.6 1036.8" y="278" font-size="22" fill="#070709">|===================|/</text>
+    <text x="759.6 772.2 784.8 797.4 810 822.6 835.2 847.8 860.4 873 885.6 898.2 910.8 923.4 936 948.6 961.2 973.8 986.4 999 1011.6 1024.2" y="298" font-size="22" fill="#070709">|___________________|/</text>
   </g>
   <g font-family="Arial, Helvetica, sans-serif" font-weight="900" letter-spacing="-2">
-    <text x="48" y="402" font-size="65" fill="#f2ecdf">InkStream</text>
-    <text x="734" y="402" font-size="65" fill="#181917">Pillowtome</text>
+    <text x="48" y="402" font-size="65" fill="#fafbff">InkStream</text>
+    <text x="734" y="402" font-size="65" fill="#070709">Pillowtome</text>
   </g>
   <g font-family="'Courier New', Courier, monospace" font-size="20" font-weight="700">
-    <text x="52" y="438" fill="#f2ecdf">THOUGHT, INTO WORDS.</text>
-    <text x="739" y="438" fill="#181917">WORDS, INTO THOUGHT.</text>
+    <text x="52" y="438" fill="#fafbff">THOUGHT, INTO WORDS.</text>
+    <text x="739" y="438" fill="#070709">WORDS, INTO THOUGHT.</text>
   </g>
 </svg>

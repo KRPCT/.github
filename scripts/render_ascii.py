@@ -1,11 +1,17 @@
 """Render KRPCT's ASCII identity. Standard library only; no network access."""
 
 from html import escape
+from math import hypot
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets" / "readme"
+TRIBAR_FACES = [
+    [(9, 19), (15, 19), (28, 6), (47, 25), (50, 22), (28, 0)],
+    [(0, 22), (3, 25), (47, 25), (28, 6), (25, 9), (38, 22)],
+    [(22, 0), (0, 22), (38, 22), (35, 19), (9, 19), (28, 0)],
+]
 
 
 def inside(x, y, polygon):
@@ -19,27 +25,42 @@ def inside(x, y, polygon):
 
 
 def penrose():
-    # Three continuous, bent faces. The depth order cycles at the corners.
-    faces = [
-        (".", [(9, 19), (15, 19), (28, 6), (47, 25), (50, 22), (28, 0)]),
-        (":", [(0, 22), (3, 25), (47, 25), (28, 6), (25, 9), (38, 22)]),
-        ("#", [(22, 0), (0, 22), (38, 22), (35, 19), (9, 19), (28, 0)]),
-    ]
-    grid = [[" "] * 51 for _ in range(26)]
-    for mark, polygon in faces:
-        for y in range(26):
-            for x in range(51):
-                if inside(x + 0.1, y + 0.1, polygon):
-                    grid[y][x] = mark
-    for _, polygon in faces:
-        for (x1, y1), (x2, y2) in zip(polygon, polygon[1:] + polygon[:1]):
-            steps = max(abs(x2 - x1), abs(y2 - y1))
-            mark = "_" if y1 == y2 else ("/" if (x2 - x1) * (y2 - y1) < 0 else "\\")
-            for i in range(steps + 1):
-                x = round(x1 + (x2 - x1) * i / steps)
-                y = round(y1 + (y2 - y1) * i / steps)
-                grid[y][x] = mark
-    return ["".join(row).rstrip() for row in grid]
+    # The three six-sided faces form the cyclic depth order of the tribar.
+    faces = zip([0.98, 0.63, 0.25], ["@MW", "%#M", "+#="], TRIBAR_FACES)
+    grid = [[" "] * 151 for _ in range(76)]
+    tones = [[0] * 151 for _ in range(76)]
+    for base, marks, polygon in faces:
+        for row in range(76):
+            for col in range(151):
+                x, y = (col + 0.5) / 3, (row + 0.5) / 3
+                if not inside(x, y, polygon):
+                    continue
+                edge = edge_distance(x, y, polygon)
+                # Narrow bevels, a darker seam, and three dominant face tones.
+                # All visible material remains made of ASCII glyphs.
+                if edge < 0.18:
+                    value, mark = 1.0, "@"
+                elif edge < 0.63:
+                    value, mark = min(1.0, base + 0.24 * (1 - edge / 0.63)), "M"
+                elif edge < 0.9:
+                    value, mark = base * 0.76, marks[(col + row) % len(marks)]
+                else:
+                    value = min(1.0, base + 0.04 * (1 - y / 25))
+                    mark = marks[(col + row) % len(marks)]
+                grid[row][col] = mark
+                tones[row][col] = round(value * 15)
+    return ["".join(row).rstrip() for row in grid], tones
+
+
+def edge_distance(x, y, polygon):
+    # Measure in projected physical units, compensating for the glyph aspect.
+    nearest = float("inf")
+    for (ax, ay), (bx, by) in zip(polygon, polygon[1:] + polygon[:1]):
+        ay, by = ay * 1.75, by * 1.75
+        dx, dy = bx - ax, by - ay
+        t = max(0, min(1, ((x - ax) * dx + (y * 1.75 - ay) * dy) / (dx * dx + dy * dy)))
+        nearest = min(nearest, hypot(x - ax - t * dx, y * 1.75 - ay - t * dy))
+    return nearest
 
 
 WORDMARK = [
@@ -69,77 +90,80 @@ def rows(lines, x, y, step, size, color, cell):
 
 def main():
     ASSETS.mkdir(parents=True, exist_ok=True)
-    triangle = penrose()
-    (ASSETS / "penrose.txt").write_text("\n".join(triangle) + "\n", encoding="ascii", newline="\n")
+    triangle, tones = penrose()
+    (ASSETS / "penrose.txt").write_text("\n".join(triangle).rstrip() + "\n", encoding="ascii", newline="\n")
     (ASSETS / "wordmark.txt").write_text("\n".join(line.rstrip() for line in WORDMARK) + "\n", encoding="ascii", newline="\n")
-    svg = '''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img" aria-labelledby="title desc">
+    svg = '''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
   <title id="title">KRPCT — Build what comes next. Keep it yours.</title>
-  <desc id="desc">A constructivist poster in vermilion, paper white, and ink black. A monumental ASCII Penrose triangle stands on a diagonal red plane beside the words Build what comes next. The letter-built KRPCT wordmark appears at the foot.</desc>
-  <rect width="1200" height="1000" fill="#f2ecdf"/>
-  <path d="M 355,360 1200,128 1200,1000 490,1000 Z" fill="#e43b2c"/>
-  <g fill="#181917" font-family="Arial, Helvetica, sans-serif" font-weight="900">
-    <text x="44" y="217" font-size="224" letter-spacing="-16">KRPCT</text>
+  <desc id="desc">A black, signal-red and cold-white constructivist composition. A large dense ASCII Penrose tribar has three distinct illuminated faces, narrow bevel highlights and a hard character shadow. Build what comes next. Keep it yours.</desc>
+  <rect width="1200" height="860" fill="#070709"/>
+  <path d="M 0,460 1200,110 1200,600 0,950 Z" fill="#ff263b"/>
+  <g fill="#fafbff" font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <text x="42" y="217" font-size="174" letter-spacing="-12">KRPCT</text>
   </g>
-  <g font-family="'Courier New', Courier, monospace" fill="#181917" font-size="22" font-weight="700">
-    <text x="56" y="47">INDEPENDENT SOFTWARE</text>
-    <text x="1139" y="47" text-anchor="end">THINK / MAKE / CHANGE</text>
+  <g font-family="'Courier New', Courier, monospace" fill="#fafbff" font-size="21" font-weight="700">
+    <text x="52" y="43">INDEPENDENT SOFTWARE</text>
+    <text x="1148" y="43" text-anchor="end">THINK / MAKE / CHANGE</text>
   </g>
-  <path d="M 57,261 H 358" stroke="#181917" stroke-width="5"/>
-  <path d="M 57,315 H 180 L 157,292 M 180,315 157,338" fill="none" stroke="#e43b2c" stroke-width="12"/>
-  <g fill="#181917" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="86" letter-spacing="-4">
-    <text x="51" y="455">BUILD</text>
-    <text x="51" y="543">WHAT</text>
-    <text x="51" y="631">COMES</text>
-    <text x="51" y="719">NEXT.</text>
+  <path d="M 52,266 H 318" stroke="#fafbff" stroke-width="4"/>
+  <g fill="#fafbff" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="80" letter-spacing="-4">
+    <text x="46" y="380">BUILD</text>
+    <text x="46" y="463">WHAT</text>
+    <text x="46" y="546">COMES</text>
+    <text x="46" y="629">NEXT.</text>
   </g>
-  <g id="penrose-ascii" transform="translate(0 -42) rotate(-10 818 574)" font-family="'Courier New', Courier, monospace" font-weight="700" xml:space="preserve">
+  <g id="penrose-ascii" transform="translate(135 -105) scale(0.87) rotate(-7 770 580)" font-family="'Courier New', Courier, monospace" font-weight="700">
+    <g opacity="0.52">
 '''
-    # The geometry consists only of ASCII glyphs. Three ink treatments expose
-    # the impossible depth cycle without filling the triangle with vector paths.
-    for symbols, color in [("#", "#181917"), (".", "#f2ecdf"), (":", "#181917"), ("/\\_", "#f2ecdf")]:
-        layer = ["".join(c if c in symbols else " " for c in line) for line in triangle]
-        svg += rows(layer, 510, 310, 21, 22, color, 12) + "\n"
-    svg += '''  </g>
-  <g fill="#181917" font-family="Arial, Helvetica, sans-serif" font-weight="900">
-    <text x="56" y="825" font-size="43" letter-spacing="-1.5">KEEP IT YOURS.</text>
+    svg += rows(triangle, 398, 302, 8.4, 9.5, "#070709", 4.8) + "\n    </g>\n"
+    # Neutral silhouette prevents the red poster plane bleeding through the
+    # characters. Facet light, texture, and bevels are rendered by the glyphs.
+    for polygon in TRIBAR_FACES:
+        points = " ".join(f"{375 + x * 14.4:g},{270 + y * 25.2:g}" for x, y in polygon)
+        svg += f'    <polygon points="{points}" fill="#070709"/>\n'
+    svg += '    <g stroke-width="0.26" paint-order="stroke fill">\n'
+    for tone in range(16):
+        layer = ["".join(c if tones[y][x] == tone else " " for x, c in enumerate(line)) for y, line in enumerate(triangle)]
+        channel = round(tone / 15 * 245 + 10)
+        color = f"#{channel:02x}{channel:02x}{channel:02x}"
+        svg += f'      <g stroke="{color}">\n' + rows(layer, 375, 278, 8.4, 9.5, color, 4.8) + "\n      </g>\n"
+    svg += '''    </g>
   </g>
-  <path d="M 56,869 H 1144" stroke="#181917" stroke-width="2"/>
-  <g font-family="'Courier New', Courier, monospace" xml:space="preserve" font-weight="700">
-'''
-    svg += rows(WORDMARK, 57, 905, 10, 10, "#181917", 6.7) + "\n"
-    svg += '''  </g>
-  <g fill="#181917" font-family="'Courier New', Courier, monospace" font-size="22" font-weight="700">
-    <text x="450" y="920">TOOLS FOR A FUTURE</text>
-    <text x="450" y="951">YOU OWN.</text>
-    <text x="1139" y="951" text-anchor="end">KRPCT / INC.</text>
+  <g fill="#fafbff" font-family="Arial, Helvetica, sans-serif" font-weight="900">
+    <text x="52" y="708" font-size="35" letter-spacing="-1">KEEP IT YOURS.</text>
+  </g>
+  <path d="M 52,787 H 1148" stroke="#fafbff" stroke-width="2"/>
+  <g fill="#fafbff" font-family="'Courier New', Courier, monospace" font-size="21" font-weight="700">
+    <text x="52" y="832">KRPCT / INC.</text>
+    <text x="1148" y="832" text-anchor="end">TOOLS FOR A FUTURE YOU OWN.</text>
   </g>
 </svg>
 '''
     (ASSETS / "hero.svg").write_text(svg, encoding="utf-8", newline="\n")
     work = '''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
   <title id="title">From thought to form — InkStream and Pillowtome</title>
-  <desc id="desc">ASCII drawings of a pen and an open book on diagonal black and paper-white fields. InkStream for writing. Pillowtome for reading.</desc>
-  <rect width="1200" height="470" fill="#f2ecdf"/>
-  <path d="M 0,0 H 734 L 580,470 H 0 Z" fill="#181917"/>
-  <path d="M 694,0 H 734 L 580,470 H 540 Z" fill="#e43b2c"/>
+  <desc id="desc">An ASCII pen and a three-dimensional book with a hatched cover and stacked page edges. Black and cold-white panels are separated by a sharp red diagonal. InkStream for writing. Pillowtome for reading.</desc>
+  <rect width="1200" height="470" fill="#fafbff"/>
+  <path d="M 0,0 H 734 L 580,470 H 0 Z" fill="#070709"/>
+  <path d="M 690,0 H 734 L 580,470 H 536 Z" fill="#ff263b"/>
   <g font-family="'Courier New', Courier, monospace" font-size="22" font-weight="700">
-    <text x="52" y="48" fill="#f2ecdf">01 / WRITE</text>
-    <text x="819" y="48" fill="#181917">02 / READ</text>
+    <text x="52" y="48" fill="#fafbff">01 / WRITE</text>
+    <text x="819" y="48" fill="#070709">02 / READ</text>
   </g>
   <g font-family="'Courier New', Courier, monospace" xml:space="preserve" font-weight="700">
 '''
     pen = ["          /\\", "         /##/", "        /##/", "       /##/", "      /##/", "     /##/", "    /__ /", "   /.. /", "  /___/", "  /", " ."]
-    book = ["      __..--. .--..__", " .--''      |      ''--.", "|  .----.   |   .----.  |", "|  |    |   |   |    |  |", "|  '----'   |   '----'  |", "|  ------   |   ------  |", "|  ------   |   ------  |", "|  ------   |   ------  |", "|__         |         __|", "   ''--..__ | __..--''", "           '-' "]
-    work += rows(pen, 244, 90, 20, 23, "#f2ecdf", 13.8) + "\n"
-    work += rows(book, 758, 103, 19, 21, "#181917", 12.6) + "\n"
+    book = ["       ___________________", "      /#################/ /|", "     /#################/ / |", "    /#################/ /  |", "   /#################/ /   |", "  /_________________/ /    |", " |___________________/    /", " |===================|   /", " |===================|  /", " |===================| /", " |___________________|/"]
+    work += rows(pen, 244, 90, 20, 25, "#fafbff", 13.8) + "\n"
+    work += rows(book, 747, 98, 20, 22, "#070709", 12.6) + "\n"
     work += '''  </g>
   <g font-family="Arial, Helvetica, sans-serif" font-weight="900" letter-spacing="-2">
-    <text x="48" y="402" font-size="65" fill="#f2ecdf">InkStream</text>
-    <text x="734" y="402" font-size="65" fill="#181917">Pillowtome</text>
+    <text x="48" y="402" font-size="65" fill="#fafbff">InkStream</text>
+    <text x="734" y="402" font-size="65" fill="#070709">Pillowtome</text>
   </g>
   <g font-family="'Courier New', Courier, monospace" font-size="20" font-weight="700">
-    <text x="52" y="438" fill="#f2ecdf">THOUGHT, INTO WORDS.</text>
-    <text x="739" y="438" fill="#181917">WORDS, INTO THOUGHT.</text>
+    <text x="52" y="438" fill="#fafbff">THOUGHT, INTO WORDS.</text>
+    <text x="739" y="438" fill="#070709">WORDS, INTO THOUGHT.</text>
   </g>
 </svg>
 '''

@@ -2,14 +2,16 @@
 
 `profile/README.md` is the organization homepage. `README.md` presents the same page at the repository root, with adjusted local asset paths.
 
+The organization page opens directly with the full-width 1200 × 860 poster. Its name and principal slogans are part of the composition, with no Markdown heading or explanatory paragraph preceding it. Navigation and project descriptions follow the poster.
+
 ## Direction
 
 - Audience: people exploring KRPCT's software and potential contributors.
 - Promise: tools for thinking and creating, with user control as a design direction.
 - Evidence: KRPCT's public InkStream and Pillowtome repository descriptions, checked on 2026-10-05. Product descriptions are repository claims, not independent validation.
 - First action: open a project or its issue tracker.
-- Visual language: constructivist typography, oblique planes, unequal fields, hard geometry, a monumental ASCII impossible triangle, a letter-built wordmark, and ASCII pen/book/cube drawings.
-- Palette: `#f2ecdf` paper, `#181917` ink, `#e43b2c` vermilion. Flat ink only; no gradients, cards, glow, or shadows.
+- Visual language: monumental constructivist typography, an oblique signal-red plane, a dense 151-column ASCII tribar with three face values, beveled edges and a hard character shadow, plus an ASCII wordmark, pen, three-dimensional book, and cube.
+- Palette: `#070709` black, `#fafbff` cold white, `#ff263b` signal red. Neutral gray steps are confined to the ASCII surface lighting. No cream, beige, glow, or blur.
 - Type: heavy Arial / Helvetica for poster text; Courier New / Courier / monospace for the artwork. Explicit character widths keep the artwork aligned.
 
 ## Reference boundary
@@ -28,7 +30,7 @@ Edit `profile/README.md` for prose. Edit `scripts/render_ascii.py` for the trian
 python scripts/render_ascii.py
 ```
 
-This standard-library command writes three ASCII source files, two poster SVGs, and the root README. The Penrose triangle, pen, book, and small wordmark consist entirely of text glyphs. Flat SVG planes and large display typography provide the constructivist composition. The command makes no network requests. The published SVGs have no scripts, external fonts, linked images, or animation.
+This standard-library command writes three ASCII source files, two poster SVGs, and the root README. The visible Penrose surface lighting, its hard character shadow, pen, book, and separate wordmark are rendered in ASCII glyphs. A neutral silhouette behind the triangle prevents the colored background showing through its surfaces. The tribar uses projected edge distances for bevels, three dominant face tones, and 16 neutral light levels. Flat SVG planes and large display typography provide the constructivist composition. The command makes no network requests. The published SVGs have no scripts, external fonts, linked images, or animation.
 
 Keep previews and check outputs outside Git. Verify the GitHub-rendered Markdown, actual organization asset URLs, and wide/narrow layouts before publishing changes.
 
