@@ -139,7 +139,7 @@ def main():
   </g>
 </svg>
 '''
-    (ASSETS / "hero.svg").write_text(svg, encoding="utf-8", newline="\n")
+    (ASSETS / "hero-v2.svg").write_text(svg, encoding="utf-8", newline="\n")
     work = '''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
   <title id="title">From thought to form — InkStream and Pillowtome</title>
   <desc id="desc">An ASCII pen and a three-dimensional book with a hatched cover and stacked page edges. Black and cold-white panels are separated by a sharp red diagonal. InkStream for writing. Pillowtome for reading.</desc>
@@ -167,11 +167,11 @@ def main():
   </g>
 </svg>
 '''
-    (ASSETS / "work.svg").write_text(work, encoding="utf-8", newline="\n")
+    (ASSETS / "work-v2.svg").write_text(work, encoding="utf-8", newline="\n")
     (ASSETS / "work.txt").write_text("WRITE / INKSTREAM\n\n" + "\n".join(line.rstrip() for line in pen) + "\n\nREAD / PILLOWTOME\n\n" + "\n".join(line.rstrip() for line in book) + "\n", encoding="ascii", newline="\n")
     profile = (ROOT / "profile" / "README.md").read_text(encoding="utf-8")
     (ROOT / "README.md").write_text(profile.replace("../assets/readme/", "./assets/readme/"), encoding="utf-8", newline="\n")
-    print("Rendered ASCII sources, hero.svg, and repository README.md")
+    print("Rendered ASCII sources, versioned SVG posters, and repository README.md")
 
 
 if __name__ == "__main__":

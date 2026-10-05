@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/readme/hero.svg?v=2" width="100%" alt="KRPCT. A dense, shaded ASCII Penrose tribar in black, cold white, and signal red. Build what comes next. Keep it yours.">
+  <img src="./assets/readme/hero-v2.svg" width="100%" alt="KRPCT. A dense, shaded ASCII Penrose tribar in black, cold white, and signal red. Build what comes next. Keep it yours.">
 </p>
 
 <p align="center"><strong>We build tools for a future you own.</strong></p>
@@ -15,7 +15,7 @@ Software for thinking, creating, and working with machines. We start with a page
 ## The work
 
 <p>
-  <img src="./assets/readme/work.svg?v=2" width="100%" alt="ASCII pen and three-dimensional book: InkStream for writing, Pillowtome for reading.">
+  <img src="./assets/readme/work-v2.svg" width="100%" alt="ASCII pen and three-dimensional book: InkStream for writing, Pillowtome for reading.">
 </p>
 
 ### [InkStream](https://github.com/KRPCT/InkStream)

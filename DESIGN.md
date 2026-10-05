@@ -4,6 +4,8 @@
 
 The organization page opens directly with the full-width 1200 × 860 poster. Its name and principal slogans are part of the composition, with no Markdown heading or explanatory paragraph preceding it. Navigation and project descriptions follow the poster.
 
+Published artwork uses revision filenames (`hero-v2.svg` and `work-v2.svg`). GitHub can serve a cached image from an unchanged raw path even when the README query string changes; use a new filename for a new visual revision and verify the loaded image dimensions on the actual organization page.
+
 ## Direction
 
 - Audience: people exploring KRPCT's software and potential contributors.
