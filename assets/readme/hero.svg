@@ -18,7 +18,7 @@
     <text x="51" y="631">COMES</text>
     <text x="51" y="719">NEXT.</text>
   </g>
-  <g id="penrose-ascii" transform="rotate(-10 818 574)" font-family="'Courier New', Courier, monospace" font-weight="700" xml:space="preserve">
+  <g id="penrose-ascii" transform="translate(0 -42) rotate(-10 818 574)" font-family="'Courier New', Courier, monospace" font-weight="700" xml:space="preserve">
     <text x="774 786 798 810 822" y="331" font-size="22" fill="#181917">#####</text>
     <text x="762 774 786 798 810" y="352" font-size="22" fill="#181917">#####</text>
     <text x="750 762 774 786 798" y="373" font-size="22" fill="#181917">#####</text>

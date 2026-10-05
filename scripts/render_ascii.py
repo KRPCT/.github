@@ -92,7 +92,7 @@ def main():
     <text x="51" y="631">COMES</text>
     <text x="51" y="719">NEXT.</text>
   </g>
-  <g id="penrose-ascii" transform="rotate(-10 818 574)" font-family="'Courier New', Courier, monospace" font-weight="700" xml:space="preserve">
+  <g id="penrose-ascii" transform="translate(0 -42) rotate(-10 818 574)" font-family="'Courier New', Courier, monospace" font-weight="700" xml:space="preserve">
 '''
     # The geometry consists only of ASCII glyphs. Three ink treatments expose
     # the impossible depth cycle without filling the triangle with vector paths.
