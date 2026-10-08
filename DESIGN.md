@@ -36,6 +36,25 @@ This standard-library command writes three ASCII source files, two poster SVGs, 
 
 Keep previews and check outputs outside Git. Verify the GitHub-rendered Markdown, actual organization asset URLs, and wide/narrow layouts before publishing changes.
 
+## Public and member views
+
+The public organization profile is served from `KRPCT/.github/profile/README.md`.
+The member view is served from the private `KRPCT/.github-private` repository's
+`profile/README.md`. Both contain the full profile. The public profile remains
+the source of truth; the member copy only rewrites image and ASCII-source links
+to absolute URLs in the public repository.
+
+After publishing a public profile change, export it to the member repository's
+checkout, review its diff, and commit and push that checkout:
+
+```sh
+python scripts/export_member_profile.py --output ../.github-private/profile/README.md
+```
+
+The export is local and does not commit or publish. Do not edit the member copy
+independently. GitHub selects the member view by default when a member-only
+README exists; visitors receive the public view. See [GitHub's profile documentation](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/customizing-your-organizations-profile).
+
 ## License
 
 The MIT license here applies to this repository's original profile copy, ASCII art, and generation script. Linked projects retain their respective license terms.
